@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #2285c6;
+  height: 120px;
+  width: 100%;
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+.header-wrapper > h1 {
+  color: white;
+}
+
+.header-nav-wrapper > ul {
+  display: flex;
+  list-style: none;
+}
+
+.header-nav-wrapper > ul > li > a {
+  padding: 10px 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  cursor: pointer;
+}
+
+.main-container {
+  display: flex;
+  width: 100%;
+
+  position: relative;
+  background-color: white;
+}
+
+.main-wrapper {
+  display: flex;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+}
+
+.main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 100vw;
+
+  padding: 50px 25px;
+
+  scroll-snap-align: start;
+}
+
+.main-card:nth-child(even) .main-card-wrapper {
+  flex-direction: row-reverse;
+}
+
+.main-card-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+
+  gap: 20px;
+}
+
+.main-card-wrapper > div:first-child {
+  height: 600px;
+  width: 600px;
+
+  background-color: #24262b;
+}
+
+.main-card-wrapper > div:last-child {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 600px;
+  width: 600px;
+}
+
+.prevBtn {
+  top: 50%;
+  left: 5px;
+  padding-right: 4px;
+  position: absolute;
+}
+
+.prevBtn > div {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 15px 15px 0; /* Adjust size as needed */
+  border-color: transparent #fff transparent transparent; /* Triangle color */
+}
+
+.nextBtn {
+  top: 50%;
+  right: 5px;
+  padding-left: 4px;
+  position: absolute;
+}
+
+.nextBtn > div {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 15px 0 15px 15px; /* Adjust size as needed */
+  border-color: transparent transparent transparent #fff; /* Triangle color */
+}
+
+.prevBtn,
+.nextBtn {
+  display: flex; /* Center the triangle */
+  align-items: center; /* Center vertically */
+  justify-content: center;
+  width: 50px; /* Width of the button */
+  height: 50px; /* Height of the button */
+
+  background-color: #2285c6; /* Button background color */
+  border: none; /* Remove default border */
+  border-radius: 50%; /* Make the button round */
+  cursor: pointer; /* Change cursor on hover */
+
+  transition: 0.5s;
+}
+
+.prevBtn:hover,
+.nextBtn:hover {
+  background-color: #1a6f9a;
+  transition: 0.5s;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #24262b;
+  padding: 70px;
+}
+
+.footer-wrapper {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 1170px;
+}
+
+.footer-wrapper > div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  height: 168px;
+}
+
+.footer-col > h4 {
+  font-size: 18px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: bold;
+  position: relative;
+}
+
+.footer-col > h4::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #e91e63;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+
+.footer-col > p {
+  font-weight: normal;
+  color: #ffffff;
+}
+
+.footer-col > p > a {
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.footer-col:last-child > div {
+  display: flex;
+}
+
+.footer-col:last-child > div > a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  width: 40px;
+  background-color: #ffffff;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.5s ease;
+}
+
+.footer-col:last-child > div > a > img {
+  height: 100%;
+  width: 100%;
+}
+
+.footer-col:last-child > div > a:nth-child(1) > img,
+.footer-col:last-child > div > a:nth-child(3) > img {
+  height: 90%;
+  width: 90%;
+}
