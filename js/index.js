@@ -17,3 +17,22 @@ prevBtn.addEventListener("click", () => {
     behavior: "smooth", // Smooth scrolling
   });
 });
+
+let startX;
+
+mainWrapper.addEventListener("touchstart", (e) => {
+  startX = e.touches[0].clientX; // Get initial touch position
+});
+
+mainWrapper.addEventListener("touchmove", (e) => {
+  const moveX = e.touches[0].clientX;
+  const diffX = startX - moveX;
+
+  if (diffX > 50) {
+    // Swipe left
+    nextSlide(); // Call your function to go to the next slide
+  } else if (diffX < -50) {
+    // Swipe right
+    prevSlide(); // Call your function to go to the previous slide
+  }
+});
