@@ -9,6 +9,8 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
+/* Header css */
+
 .header-container {
   display: flex;
   justify-content: center;
@@ -44,6 +46,8 @@ body {
   cursor: pointer;
 }
 
+/* Main card css */
+
 .main-container {
   display: flex;
   width: 100%;
@@ -73,14 +77,14 @@ body {
   content: "";
   position: absolute;
   left: 50;
-  bottom: -1px; /* Adjust this value to control the position of the line */
+  bottom: -1px;
   width: 1000px;
-  height: 2px; /* Thickness of the line */
-  background-color: #ccc; /* Color of the line */
+  height: 2px;
+  background-color: #ccc;
 }
 
 .main-card:last-child::after {
-  display: none; /* Hide the line for the last card */
+  display: none;
 }
 
 .main-card:nth-child(even) .main-card-wrapper {
@@ -110,6 +114,8 @@ body {
   height: 600px;
   width: 600px;
 }
+
+/* Footer css */
 
 .footer-container {
   display: flex;

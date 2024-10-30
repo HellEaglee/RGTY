@@ -1,19 +1,21 @@
-const mainWrapper = document.querySelector(".main-wrapper");
-const nextBtn = document.getElementById("nextBtn");
-const prevBtn = document.getElementById("prevBtn");
+// Slider
 
-nextBtn.addEventListener("click", () => {
-  mainWrapper.scrollBy({
-    top: 0,
-    left: window.innerWidth, // Scroll by one viewport width
-    behavior: "smooth", // Smooth scrolling
-  });
-});
+// const mainWrapper = document.querySelector(".main-wrapper");
+// const nextBtn = document.getElementById("nextBtn");
+// const prevBtn = document.getElementById("prevBtn");
 
-prevBtn.addEventListener("click", () => {
-  mainWrapper.scrollBy({
-    top: 0,
-    left: -window.innerWidth, // Scroll back by one viewport width
-    behavior: "smooth", // Smooth scrolling
-  });
-});
+// nextBtn.addEventListener("click", () => {
+//   mainWrapper.scrollBy({
+//     top: 0,
+//     left: window.innerWidth,
+//     behavior: "smooth",
+//   });
+// });
+
+// prevBtn.addEventListener("click", () => {
+//   mainWrapper.scrollBy({
+//     top: 0,
+//     left: -window.innerWidth,
+//     behavior: "smooth",
+//   });
+// });
