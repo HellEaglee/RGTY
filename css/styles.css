@@ -54,18 +54,7 @@ body {
 
 .main-wrapper {
   display: flex;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  scroll-snap-type: x mandatory;
-}
-
-@media screen and (min-width: 1024px) {
-  .main-wrapper {
-    display: flex;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    scroll-snap-type: x mandatory;
-  }
+  flex-direction: column;
 }
 
 .main-card {
@@ -77,7 +66,21 @@ body {
 
   padding: 50px 25px;
 
-  scroll-snap-align: start;
+  position: relative;
+}
+
+.main-card::after {
+  content: "";
+  position: absolute;
+  left: 50;
+  bottom: -1px; /* Adjust this value to control the position of the line */
+  width: 1000px;
+  height: 2px; /* Thickness of the line */
+  background-color: #ccc; /* Color of the line */
+}
+
+.main-card:last-child::after {
+  display: none; /* Hide the line for the last card */
 }
 
 .main-card:nth-child(even) .main-card-wrapper {
@@ -108,71 +111,20 @@ body {
   width: 600px;
 }
 
-.prevBtn {
-  top: 50%;
-  left: 5px;
-  padding-right: 4px;
-  position: absolute;
-}
-
-.prevBtn > div {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 15px 15px 15px 0; /* Adjust size as needed */
-  border-color: transparent #fff transparent transparent; /* Triangle color */
-}
-
-.nextBtn {
-  top: 50%;
-  right: 5px;
-  padding-left: 4px;
-  position: absolute;
-}
-
-.nextBtn > div {
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 15px 0 15px 15px; /* Adjust size as needed */
-  border-color: transparent transparent transparent #fff; /* Triangle color */
-}
-
-.prevBtn,
-.nextBtn {
-  display: flex; /* Center the triangle */
-  align-items: center; /* Center vertically */
-  justify-content: center;
-  width: 50px; /* Width of the button */
-  height: 50px; /* Height of the button */
-
-  background-color: #2285c6; /* Button background color */
-  border: none; /* Remove default border */
-  border-radius: 50%; /* Make the button round */
-  cursor: pointer; /* Change cursor on hover */
-
-  transition: 0.5s;
-}
-
-.prevBtn:hover,
-.nextBtn:hover {
-  background-color: #1a6f9a;
-  transition: 0.5s;
-}
-
 .footer-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #24262b;
-  padding: 70px;
+  background-color: #20315f;
+  padding: 20px 0px;
 }
 
 .footer-wrapper {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  width: 1170px;
+  width: 1300px;
 }
 
 .footer-wrapper > div {
@@ -243,4 +195,15 @@ body {
 .footer-col:last-child > div > a:nth-child(3) > img {
   height: 90%;
   width: 90%;
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 1170px;
+  margin-top: 50px;
+  padding-top: 10px;
+  border-top: 1px solid rgba(256, 256, 256, 0.1);
+  font-size: 14px;
+  color: #fff;
 }
