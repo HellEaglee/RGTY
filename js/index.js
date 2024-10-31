@@ -1,21 +1,69 @@
 // Slider
 
-// const mainWrapper = document.querySelector(".main-wrapper");
-// const nextBtn = document.getElementById("nextBtn");
-// const prevBtn = document.getElementById("prevBtn");
+document.addEventListener("DOMContentLoaded", () => {
+  const mainSlider = document.querySelector(".main-slider");
+  const nextBtn = document.getElementById("nextBtn");
+  const prevBtn = document.getElementById("prevBtn");
+  const dotsContainer = document.querySelector(".slider-dots");
 
-// nextBtn.addEventListener("click", () => {
-//   mainWrapper.scrollBy({
-//     top: 0,
-//     left: window.innerWidth,
-//     behavior: "smooth",
-//   });
-// });
+  const slides = mainSlider.children;
+  let currentIndex = 0;
 
-// prevBtn.addEventListener("click", () => {
-//   mainWrapper.scrollBy({
-//     top: 0,
-//     left: -window.innerWidth,
-//     behavior: "smooth",
-//   });
-// });
+  // Create dots
+  for (let i = 0; i < slides.length; i++) {
+    const dot = document.createElement("div");
+    dot.classList.add("slider-dot");
+    dot.dataset.index = i; // Set index for each dot
+    dot.addEventListener("click", () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  }
+
+  // Function to update active dot
+  function updateDots() {
+    const dots = document.querySelectorAll(".slider-dot");
+    dots.forEach((dot, index) => {
+      dot.classList.toggle("active", index === currentIndex);
+    });
+  }
+
+  // Function to update button visibility
+  function updateButtonVisibility() {
+    if (currentIndex === 0) {
+      prevBtn.classList.add("hidden"); // Hide left button if on first slide
+    } else {
+      prevBtn.classList.remove("hidden"); // Show left button
+    }
+
+    if (currentIndex === slides.length - 1) {
+      nextBtn.classList.add("hidden"); // Hide right button if on last slide
+    } else {
+      nextBtn.classList.remove("hidden"); // Show right button
+    }
+  }
+
+  // Function to go to a specific slide
+  function goToSlide(index) {
+    currentIndex = index;
+    mainSlider.scrollTo({
+      top: 0,
+      left: window.innerWidth * currentIndex,
+      behavior: "smooth",
+    });
+    updateDots();
+    updateButtonVisibility(); // Update button visibility after changing slide
+  }
+
+  nextBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex + 1) % slides.length;
+    goToSlide(currentIndex);
+  });
+
+  prevBtn.addEventListener("click", () => {
+    currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+    goToSlide(currentIndex);
+  });
+
+  // Initialize dots and button visibility on load
+  updateDots();
+  updateButtonVisibility();
+});
