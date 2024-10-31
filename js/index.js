@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
   for (let i = 0; i < slides.length; i++) {
     const dot = document.createElement("div");
     dot.classList.add("slider-dot");
-    dot.dataset.index = i; // Set index for each dot
+    dot.dataset.index = i;
     dot.addEventListener("click", () => goToSlide(i));
     dotsContainer.appendChild(dot);
   }
@@ -29,15 +29,15 @@ document.addEventListener("DOMContentLoaded", () => {
   // Function to update button visibility
   function updateButtonVisibility() {
     if (currentIndex === 0) {
-      prevBtn.classList.add("hidden"); // Hide left button if on first slide
+      prevBtn.classList.add("hidden");
     } else {
-      prevBtn.classList.remove("hidden"); // Show left button
+      prevBtn.classList.remove("hidden");
     }
 
     if (currentIndex === slides.length - 1) {
-      nextBtn.classList.add("hidden"); // Hide right button if on last slide
+      nextBtn.classList.add("hidden");
     } else {
-      nextBtn.classList.remove("hidden"); // Show right button
+      nextBtn.classList.remove("hidden");
     }
   }
 
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
       behavior: "smooth",
     });
     updateDots();
-    updateButtonVisibility(); // Update button visibility after changing slide
+    updateButtonVisibility();
   }
 
   nextBtn.addEventListener("click", () => {

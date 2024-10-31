@@ -403,9 +403,9 @@ body {
   right: 0;
   bottom: 0;
   border-radius: 8px 8px 0 0;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark overlay */
-  opacity: 0; /* Initially hidden */
-  transition: opacity 0.3s ease; /* Smooth transition for overlay */
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .main-rent-grid > div > div:first-child:hover::after {
@@ -875,8 +875,8 @@ body {
 }
 
 .hidden {
-  opacity: 0; /* Make invisible */
-  visibility: hidden; /* Prevent interaction */
+  opacity: 0;
+  visibility: hidden;
 }
 
 #nextBtn:hover {
@@ -884,36 +884,36 @@ body {
 }
 
 .hide-scrollbar {
-  overflow: auto; /* Allows scrolling */
+  overflow: auto;
 }
 
 .hide-scrollbar::-webkit-scrollbar {
-  display: none; /* Hides scrollbar for WebKit browsers */
+  display: none;
 }
 
 .hide-scrollbar {
-  scrollbar-width: none; /* Hides scrollbar for Firefox */
-  -ms-overflow-style: none; /* Hides scrollbar for IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
 
 .slider-dots {
   display: flex;
   justify-content: center;
-  margin-top: 10px; /* Space between slider and dots */
+  margin-top: 10px;
 }
 
 .slider-dot {
   height: 10px;
   width: 10px;
-  margin: 0 5px; /* Space between dots */
+  margin: 0 5px;
   border-radius: 50%;
-  background-color: #ffffff9f; /* Inactive dot color */
+  background-color: #ffffff9f;
   cursor: pointer;
   transition: background-color 0.3s;
 }
 
 .slider-dot.active {
-  background-color: #fff; /* Active dot color */
+  background-color: #fff;
 }
 
 /* Pagination css */
