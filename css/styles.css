@@ -748,12 +748,20 @@ body {
 .main-projects-grid > div > p {
   margin-top: 15px;
   margin-left: 10px;
+  padding: 5px;
   font-size: 20px;
   font-weight: 700;
   max-width: 200px;
   overflow-wrap: break-word;
   position: absolute;
   z-index: 15;
+
+  background: rgba(140, 197, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.6px);
+  -webkit-backdrop-filter: blur(3.6px);
+  border: 1px solid rgba(140, 197, 255, 0.1);
 }
 
 .main-projects-grid > div > img {
@@ -1134,6 +1142,28 @@ body {
 
 /* Progress css */
 
+.footer-widget {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.col-xs-12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 300px;
+}
+
 .progress {
   background-color: #e0e0e0;
   border-radius: 8px;
@@ -1144,6 +1174,7 @@ body {
 
 .progress-bar {
   height: 100%;
+  width: 100%;
   transition: width 0.4s ease;
   border-radius: 8px;
 }
@@ -1169,7 +1200,7 @@ body {
   color: white;
   font-weight: bold;
   text-align: center;
-  width: 100%;
+  left: 50%;
 }
 
 /* Footer css */
