@@ -655,6 +655,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   width: 100%;
 }
 
@@ -662,14 +663,14 @@ body {
   font-size: 60px;
   font-weight: 700;
   color: #1b2c51;
-  margin-left: 200px;
   margin-bottom: 20px;
 }
 
 .main-dir-wrapper > div {
   display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  padding-left: 200px;
 }
 
 .main-dir-wrapper > div > div:first-child {
@@ -710,14 +711,16 @@ body {
 .main-projects-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   width: 100%;
-  padding-left: 140px;
 }
 
 .main-projects-wrapper > h1 {
   font-size: 60px;
   font-weight: 700;
+  margin-bottom: 20px;
   color: #1b2c51;
 }
 
@@ -999,9 +1002,14 @@ body {
 
   margin-top: 20px;
   margin-bottom: 20px;
+
+  gap: 20px;
 }
 
 .feature-bottom > div:first-child {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 400px;
   width: 400px;
 }
