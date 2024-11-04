@@ -1203,6 +1203,89 @@ body {
   left: 50%;
 }
 
+/* Article Container Styles */
+.article-container {
+  max-width: 800px; /* Limit width for better readability */
+  margin: auto; /* Center align */
+  padding: 20px;
+  background-color: #e6f7ff; /* Soft blue background */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Article css */
+
+.arcticle-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.arcticle-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.article-header {
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 15px;
+  margin-bottom: 20px;
+}
+
+.article-title {
+  color: #003d80;
+  font-size: 2.5em;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: space-between;
+  color: #0056b3;
+}
+
+.article-intro {
+  margin-bottom: 20px;
+}
+
+.article-content {
+  line-height: 1.6;
+}
+
+.arcticle-image-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 800px;
+  height: 450px;
+  border-radius: 20px;
+  margin: 10px 0;
+}
+
+.article-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+.arcticle-container::after {
+  content: "";
+  position: absolute;
+  left: 50;
+  bottom: -1px;
+  width: 1000px;
+  height: 2px;
+  background-color: #ccc;
+}
+
+.arcticle-container:last-child::after {
+  display: none;
+}
+
 /* Footer css */
 
 .footer-container {
