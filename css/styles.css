@@ -514,6 +514,17 @@ body {
   color: #1b2c51;
 }
 
+.main-contacts-top > div > div:last-child > p > a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #1b2c51;
+  transition: 0.3s ease;
+}
+
+.main-contacts-top > div > div:last-child > p > a:hover {
+  color: #365aa6;
+}
+
 .main-contacts-bottom {
   display: flex;
   margin-top: 24px;
@@ -527,6 +538,45 @@ body {
   border-radius: 8px;
 
   padding: 48px;
+}
+
+/* Schedule Container Styles */
+.schedule-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.schedule-container > h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #1b2c51;
+  margin-bottom: 24px;
+}
+
+.work-schedule {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.work-schedule th,
+.work-schedule td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #007bff;
+}
+
+.work-schedule th {
+  background-color: #007bff;
+  color: white;
+}
+
+.work-schedule tr:hover {
+  background-color: #fefefe;
+  transition: 0.3s ease;
 }
 
 .main-contacts-bottom-left > h1 {
@@ -543,14 +593,14 @@ body {
   margin-bottom: 24px;
 }
 
-.main-contacts-bottom-left > div {
+.main-contacts-form > div {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 16px;
 }
 
-.main-contacts-bottom-left > div > input {
+.main-contacts-bottom-input {
   display: block;
   width: 100%;
   padding: 0.375rem 0.75rem;
@@ -567,7 +617,7 @@ body {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.main-contacts-bottom-left > input {
+.main-contacts-bottom-input:nth-last-child(3) {
   display: block;
   width: 100%;
   margin-top: 16px;
@@ -585,7 +635,7 @@ body {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-.main-contacts-bottom-left > textarea {
+.main-contacts-bottom-textarea {
   display: block;
   width: 528px;
   min-height: 128px;
@@ -604,7 +654,7 @@ body {
   resize: vertical;
 }
 
-.main-contacts-bottom-left > button {
+.main-contacts-bottom-button {
   display: flex;
   justify-content: center;
   align-items: center;

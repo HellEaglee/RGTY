@@ -38,8 +38,10 @@
                 <div>
                   <h5>Адрес</h5>
                   <p>
-                    Восточно-Промышленный <br />
-                    район, А Конаково
+                    <a href="https://yandex.ru/maps/-/CDh6UU5k"
+                      >Восточно-Промышленный <br />
+                      район, А Конаково</a
+                    >
                   </p>
                 </div>
               </div>
@@ -47,34 +49,93 @@
                 <div><img src="/img/phone_icon.svg" alt="phone" /></div>
                 <div>
                   <h5>Позвони сейчас</h5>
-                  <p>+7 910 084 1919</p>
+                  <p><a href="tel:+79100841919">+7 910 084 1919</a></p>
                 </div>
               </div>
               <div>
                 <div><img src="/img/mail_icon.svg" alt="mail" /></div>
                 <div>
                   <h5>Отправь письмо</h5>
-                  <p>studio@rgty.ru</p>
+                  <p><a href="mailto:studio@rgty.ru">studio@rgty.ru</a></p>
                 </div>
               </div>
             </div>
             <div class="main-contacts-bottom">
               <div class="main-contacts-bottom-left">
-                <h1>Есть какие-то вопросы? Свяжитесь с нами!</h1>
-                <p>
-                  The contact form is currently inactive. Get a functional and
-                  working contact form with Ajax & PHP in a few minutes. Just
-                  copy and paste the files, add a little code and you're done.
-                </p>
-                <div>
-                  <input type="text" placeholder="Имя" /><input
-                    type="text"
-                    placeholder="Почта"
-                  />
+                <div class="schedule-container">
+                  <h2>График работы:</h2>
+                  <table class="work-schedule">
+                    <thead>
+                      <tr>
+                        <th>День</th>
+                        <th>Часы работы</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Понедельник</td>
+                        <td>10:00 - 17:00</td>
+                      </tr>
+                      <tr>
+                        <td>Вторник</td>
+                        <td>10:00 - 17:00</td>
+                      </tr>
+                      <tr>
+                        <td>Среда</td>
+                        <td>10:00 - 17:00</td>
+                      </tr>
+                      <tr>
+                        <td>Четверг</td>
+                        <td>10:00 - 17:00</td>
+                      </tr>
+                      <tr>
+                        <td>Пятница</td>
+                        <td>10:00 - 17:00</td>
+                      </tr>
+                      <tr>
+                        <td>Суббота</td>
+                        <td>Выходной</td>
+                      </tr>
+                      <tr>
+                        <td>Воскресенье</td>
+                        <td>Выходной</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
-                <input type="text" placeholder="Тема" />
-                <textarea placeholder="Сообщение"></textarea>
-                <button>Отправить сообщение</button>
+                <form class="main-contacts-form" method="POST" action="">
+                  <div>
+                    <input
+                      class="main-contacts-bottom-input"
+                      name="user_name"
+                      type="text"
+                      placeholder="Имя"
+                    />
+                    <input
+                      class="main-contacts-bottom-input"
+                      name="user_mail"
+                      type="text"
+                      placeholder="Почта"
+                    />
+                  </div>
+                  <input
+                    class="main-contacts-bottom-input"
+                    name="z_name"
+                    type="text"
+                    placeholder="Тема"
+                  />
+                  <input
+                    class="main-contacts-bottom-textarea"
+                    name="z_comment"
+                    type="text"
+                    placeholder="Сообщение"
+                  />
+                  <input
+                    class="main-contacts-bottom-button"
+                    type="submit"
+                    value="Отправить"
+                  />
+                </form>
               </div>
               <div class="map">
                 <iframe
