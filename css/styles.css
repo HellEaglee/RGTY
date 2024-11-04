@@ -682,8 +682,12 @@ body {
 
   color: #fff;
   background-color: #0354d5;
-  border-color: #034fc8;
+  transition: 0.5s ease;
   cursor: pointer;
+}
+
+.main-contacts-bottom-button:hover {
+  background-color: #367ef4;
 }
 
 .map {
